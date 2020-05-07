@@ -29,7 +29,8 @@ while vehicle.armed:
     for time, volts, amps, speed, long, lat, alt in collectdata():
         data.append([time, volts, amps, speed, long, lat, alt])
         time.sleep(1)
-    
+
+print("Data saving...")    
 column_names = ["Time", "Battery Voltage", "Battery Current", "Ground Speed", "longitude", "Latitude", "altitude"]
 df = pd.DataFrame(data, columns = column_names)
 df.to_csv('flight_data_log.csv')
