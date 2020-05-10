@@ -16,7 +16,7 @@ def collectdata():
     
 # Connect to onboard MAVlink strean
 ip = socket.gethostname()
-vehicle = connect(ip, wait_ready=True)
+vehicle = connect('127.0.1.1:14550', wait_ready=True)
 print("Connection to MAVlink established")
 data = []
 
